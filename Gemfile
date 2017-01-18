@@ -29,6 +29,9 @@ gem 'filterrific', '~> 2.0', '>= 2.0.5'
 # For text search
 gem 'textacular', '~> 3.0'
 
+# For pagination
+gem 'will_paginate', '~> 3.1', '>= 3.1.5'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
