@@ -2,6 +2,45 @@
 
 <h1>Listing Listings</h1>
 
+<%= form_for_filterrific @filterrific do |f| %>
+  <div>
+    Search
+    <%= f.text_field(
+      :basic_search,
+      class: 'filterrific-periodically-observed'
+    ) %>
+  </div>
+
+  <!-- workin start -->
+  <div>
+    Country
+    <!-- probably selectoptions with_type is wrong over here -->
+    <%= f.select(
+      :with_type,
+      @filterrific.select_options[:with_type],
+      { include_blank: '- Any -' }
+    ) %>
+  </div>
+
+  <div>
+    Minimum room
+    <%= f.number_field(:with_min_room) %>
+  </div>
+  <!-- end -->
+  <div>
+    Sorted by
+    <%= f.select(:sorted_by, @filterrific.select_options[:sorted_by]) %>
+  </div>
+  <div>
+    <%= link_to(
+      'Reset filters',
+      reset_filterrific_url,
+    ) %>
+  </div>
+  <%# add an automated spinner to your form when the list is refreshed %>
+  <%= render_filterrific_spinner %>
+<% end %>
+
 <table>
   <thead>
     <tr>
