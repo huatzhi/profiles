@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # For searches and filters
 gem 'filterrific', '~> 2.0', '>= 2.0.5'
 
+# For text search
+gem 'textacular', '~> 3.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
