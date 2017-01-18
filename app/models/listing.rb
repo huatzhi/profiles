@@ -17,7 +17,7 @@ class Listing < ActiveRecord::Base
       :sorted_by,
       :basic_search,
       :with_type,
-      :with_min_room
+      :with_min_room,
       :with_min_bath_room
     ]
   )
