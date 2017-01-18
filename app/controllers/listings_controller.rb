@@ -16,7 +16,7 @@ class ListingsController < ApplicationController
       available_filters: [],
     ) or return
 
-    @students = @filterrific.find.page(params[:page])
+    @listings = @filterrific.find.page(params[:page])
   end
 
   # GET /listings/1
